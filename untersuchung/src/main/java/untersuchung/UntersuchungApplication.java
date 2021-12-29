@@ -15,22 +15,20 @@ import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
 
 @SpringBootApplication
-@EnableMongoRepositories("io.project.app.repositories")
-@ComponentScan("io.project")
-@EntityScan("io.project.app.domain.*")
+@EnableMongoRepositories("untersuchung.repositories")
+@ComponentScan("untersuchung")
+@EntityScan("untersuchung.domain.*")
 @EnableAsync
 @Slf4j
-public class AccountApplication {
+public class UntersuchungApplication {
 
     public static void main(String[] args) {
-        final SpringApplication application = new SpringApplication(AccountApplication.class);
+        final SpringApplication application = new SpringApplication(UntersuchungApplication.class);
         application.setBannerMode(Banner.Mode.CONSOLE);
         application.setWebApplicationType(WebApplicationType.SERVLET);
         application.run(args);
 
-    }
-
-    @Bean
+    }    @Bean
     public CorsFilter corsFilter() {
         final UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         final org.springframework.web.cors.CorsConfiguration config = new org.springframework.web.cors.CorsConfiguration();

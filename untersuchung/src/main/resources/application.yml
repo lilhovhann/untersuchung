@@ -38,7 +38,7 @@ spring:
   main:
     allow-bean-definition-overriding: true
   application:
-    name: account 
+    name: untersuchung 
 
        
   servlet:
